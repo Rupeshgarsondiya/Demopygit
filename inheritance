@@ -1,0 +1,44 @@
+# SINGLE LEVEL INHERITANCE EXMAPLE
+class A:
+    def father(self):
+        print("my father name is pankajbhai")
+class B(A):
+    def my_self(self):
+        print("my name is rupesh")
+
+x = B()
+x.my_self()
+x.father()
+
+# Multi level inheritance example
+class a:
+    def grand_father(self):
+        print("My grand father name is ramnikbhai")
+class b(a):     # Here class b have class a and own mwthod
+    def father(self):
+        print("my father name pankajbhai")
+class c(b): # Class c have  b and a class method
+    def my(self):
+        print("my name rupesh")
+y = c()
+y.grand_father()
+y.father()
+y.my()
+
+#Multiple Inheritance Example
+class a: # class a have only own your method
+    def father(self):
+        print("my fahter name is pankajbhai")
+class b : # class b have only own your method
+    # here class a and b not inherite to each other
+    def mother(self):
+        print("my mother name is vanitabeen")
+class c:
+    def x(self):
+        print("class c")
+class d(a,b,c): # here class c have both class method
+    def my(self):
+        print("my name is rupesh")
+
+d1 = d()
+d1.x()
